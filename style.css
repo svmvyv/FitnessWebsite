@@ -15,6 +15,8 @@ body {
 }
 
 #map {
+    flex-basis: 0;
+    flex-grow: 4;
     height: 100%;
 }
 
@@ -24,6 +26,16 @@ a {
 
 
 /* HEADER  */
+
+header,
+nav,
+section,
+article,
+aside,
+footer,
+hgroup {
+    display: block;
+}
 
 .background-header {
     background: rgba(250, 250, 250, 0.99) !important;
@@ -523,4 +535,147 @@ a {
 
 .main-button a:hover {
     background-color: #f9735b;
+}
+
+#contact-us {
+    background-color: #1e1e1e;
+    color: #fff;
+    margin-top: 440px;
+}
+
+#contact-us .container-fluid .col-lg-6 {
+    padding: 0px;
+}
+
+#contact-us .contact-form {
+    padding: 80px;
+    background-image: url(../images/contact-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contact-us .contact-form #contact {
+    background-color: rgba(163, 163, 163, 0.253);
+    padding: 40px;
+    border-radius: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    color: #7a7a7a;
+    font-size: 13px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    width: 100%;
+    height: 40px;
+    outline: none;
+    line-height: 40px;
+    padding: 0px 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-bottom: 30px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form ::-webkit-input-placeholder {
+    /* Edge */
+    color: #7a7a7a;
+}
+
+.contact-form :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #7a7a7a;
+}
+
+.contact-form ::placeholder {
+    color: #7a7a7a;
+}
+
+.contact-form button {
+    display: inline-block;
+    font-size: 13px;
+    padding: 11px 17px;
+    background-color: #ed563b;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: all .3s;
+    border: none;
+    outline: none;
+    margin-top: -8px;
+}
+
+.contact-form button:hover {
+    background-color: #f9735b;
+}
+
+#sidebar {
+    flex-basis: 5rem;
+    flex-grow: 1;
+    padding: 1rem;
+    max-width: 30rem;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar>h2 {
+    font-size: 1.5rem;
+    margin: 0 0 5px 0;
+    flex-grow: 0;
+}
+
+#sidebar>ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    flex-grow: 1;
+}
+
+#places>li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+#places>li:nth-child(odd) {
+    background-color: #fcfcfc;
+}
+
+#sidebar>button {
+    width: 100%;
+    padding: 1rem;
+    flex-grow: 0;
+    cursor: pointer;
+    background: #ed563b;
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+}
+
+#sidebar>button:hover {
+    color: #c5d4f0;
+}
+
+#sidebar>button:disabled {
+    background-color: #ed563b;
+    color: #c5d4f0;
+    cursor: auto;
 }

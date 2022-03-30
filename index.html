@@ -59,15 +59,73 @@
     </div>
 
     <section class="section" id="features">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <div class="section-heading">
-                        <h2>Find A <em>Gym</em></h2>
-                        <img src="line-dec.png" alt="waves">
+                <div class="section-heading">
+                    <h2>Find A <em>Gym</em></h2>
+                    <img src="line-dec.png" alt="waves">
+                </div>
+                <div id="container">
+                    <div id="map"></div>
+                    <div id="sidebar">
+                        <h2>Gyms Near You:</h2>
+                        <ul id="places"></ul>
+                        <button id="more">Load more results</button>
+                    </div>
+                </div>
 
-                        <div id="map"></div>
+            </div>
+        </div>
+    </section>
 
+    <section class="section" id="contact-us">
+        <div class="container-fluid mx-auto">
+            <div class="section-heading pt-5">
+                <h2 style="color:white;">Contact <em>Us</em></h2>
+                <img src="line-dec.png" alt="waves">
+            </div>
+            <div class="row">
+                <div class="col-xl-6">
+
+                    <em><i class="fa-brands fa-facebook fs-1 p-3"></i></em>Like our page on facebook!<br>
+
+                    <i class="fa-brands fa-twitter fs-1 p-3"></i>Follow @FindAGym<br>
+
+                    <i class="fa-brands fa-instagram fs-1 p-3"></i>Follow us on instagram!<br>
+                </div>
+                <div class="col-xl-6">
+                    <div class="contact-form">
+                        <h2>Do you have any inquiries?</h2>
+                        <form id="contact" action="" method="post">
+                            <div class="row">
+
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" id="name" placeholder="Your Name*" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email*" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12 col-sm-12">
+                                    <fieldset>
+                                        <input name="subject" type="text" id="subject" placeholder="Subject">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="main-button">Send Message</button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -77,9 +135,10 @@
 
     <!-- script -->
 
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkBSiVuSnkBtzqvV-paiRiy5jxPaiJcDc&callback=initMap">
-    </script>
+
     <script src="/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkBSiVuSnkBtzqvV-paiRiy5jxPaiJcDc&libraries=places&callback=initMap" async defer></script>
+    <script src="https://kit.fontawesome.com/1341c370f4.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
