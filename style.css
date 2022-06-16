@@ -679,3 +679,7 @@ hgroup {
     color: #c5d4f0;
     cursor: auto;
 }
+
+#map-container {
+    display: flex;
+}

@@ -1,12 +1,12 @@
 function initMap() {
     // Create the map.
     const pyrmont = {
-        lat: -33.866,
-        lng: 151.196
+        lat: 21.4858,
+        lng: 39.1925
     };
     const map = new google.maps.Map(document.getElementById("map"), {
         center: pyrmont,
-        zoom: 17,
+        zoom: 14,
         mapId: "8d193001f940fde3",
     });
     // Create the places service.
@@ -24,8 +24,8 @@ function initMap() {
     // Perform a nearby search.
     service.nearbySearch({
             location: pyrmont,
-            radius: 500,
-            type: "gym"
+            radius: 5500,
+            type: "restaurant"
         },
         (results, status, pagination) => {
             if (status !== "OK" || !results) return;
@@ -48,8 +48,8 @@ function addPlaces(places, map) {
     for (const place of places) {
         if (place.geometry && place.geometry.location) {
             const image = {
-                url: place.icon,
-                size: new google.maps.Size(71, 71),
+                url: 'https://i.ibb.co/pXPJ1Sc/gym-location-1.png',
+                size: new google.maps.Size(100, 100),
                 origin: new google.maps.Point(0, 0),
                 anchor: new google.maps.Point(17, 34),
                 scaledSize: new google.maps.Size(25, 25),
