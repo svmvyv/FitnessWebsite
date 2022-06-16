@@ -25,7 +25,7 @@ function initMap() {
     service.nearbySearch({
             location: pyrmont,
             radius: 5500,
-            type: "restaurant"
+            type: "gym"
         },
         (results, status, pagination) => {
             if (status !== "OK" || !results) return;
